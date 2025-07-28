@@ -1,0 +1,76 @@
+SelectK Algorithm has produced below listed best columns :
+
+Selected Feature Names:
+Index(['RecordType', 'CreationDate_2025-07-18 17:06:00',
+       'Operation_FileModified', 'Operation_FileModifiedExtended',
+       'Operation_FileUploaded', 'Operation_UserLoginFailed',
+       'ClientIP_192.168.1.100', 'ClientIP_203.28.245.168',
+       'LogonError_InvalidUserNameOrPassword'],
+      dtype='object')
+	  
+	  	  
+Feature Importance Algorithm has produced below listed best columns :
+
+Top 10 important features:
+                        TOP_Feature  TOP_Importance
+154          Operation_FileModified        0.066772
+151          Operation_FileAccessed        0.059433
+265         ClientIP_203.28.245.168        0.052723
+0                        RecordType        0.046199
+155  Operation_FileModifiedExtended        0.041779
+373              LogonError_Success        0.040384
+358                 GeoLocation_IND        0.039205
+180       Operation_UserLoginFailed        0.038236
+251          ClientIP_192.168.1.100        0.037494
+159          Operation_FileUploaded        0.022261
+
+
+Rcursive Feature Elimination Algorithm has produced below listed best columns :
+
+logistic Regression model : 
+
+Selected Columns: ['Operation_FileAccessed', 'Operation_FileDownloaded', 'Operation_FileRecycled',
+ 'Operation_MoveToDeletedItems', 'Operation_TeamsSessionStarted', 'Workload_OneDrive', 'ClientIP_192.168.1.100',
+ 'ClientIP_203.28.245.168', 'GeoLocation_IND', 'ApplicationDisplayName_OneDrive']
+
+Random Forest model : 
+ Selected Columns: ['RecordType', 'HourOfDay', 'Operation_FileAccessed', 
+ 'Operation_FileDownloaded', 'Operation_FileModified', 'Operation_FileModifiedExtended',
+ 'Operation_FileRecycled', 'Operation_FileRenamed', 'ClientIP_203.28.245.168', 'GeoLocation_IND']
+ 
+ DecisionTree model:
+ Selected Columns: ['Operation_AuditSearchDeleted', 'Operation_FileAccessed', 'Operation_FileRenamed', 
+ 'Operation_MoveToDeletedItems', 'Operation_SharingInheritanceBroken', 'ResultStatus_unknown', 'Workload_OneDrive', 
+ 'ClientIP_185.187.243.251', 'ClientIP_203.28.245.168', 'GeoLocation_IND']
+ 
+ Support Vector :
+ Selected Columns: ['Operation_FileAccessed', 'Operation_FileDownloaded', 'Operation_FileRecycled', 'Operation_FolderCreated', 
+ 'Operation_MoveToDeletedItems', 'Operation_SharingInheritanceBroken', 'Operation_UserLoginFailed', 'Workload_OneDrive', 
+ 'ClientIP_185.187.243.251', 'ClientIP_203.28.245.168']
+
+After deep analysis, Finally  shortlisted Best Columns are as follows,
+
+Operation_FileAccessed
+
+Operation_FileModified
+
+Operation_FileUploaded
+
+Operation_FileDownloaded
+
+Operation_MoveToDeletedItems
+
+IsRiskyHour
+
+Operation_UserLoginFailed
+
+GeoLocation_IND
+
+ClientIP_203.28.245.168
+
+ClientIP_192.168.1.100
+
+ResultStatus_unknown
+
+IsThreat 
+ 
