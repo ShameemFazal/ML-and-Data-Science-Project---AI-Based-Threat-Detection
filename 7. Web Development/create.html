@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block body_block %}
+<div class="jumbotron">
+  <h1>AI-ML - Based Cyber Threat Detection</h1><hr>
+  <head>
+    Please enter repective fields, If Yes then enter '1' and If No then enter '0'.
+  </head>
+
+    <form method = "post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <button type="submit" class="btn btn-primary">upload</button>
+    </form>
+  </div>
+{% endblock %}
