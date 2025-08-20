@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block body_block %}
+{% load static %}
+<div class="jumbotron">
+    <h1> AI-ML - Based Cyber Threat Detection</h1>
+    <hr>
+    <div class="fieldWrapper">
+      <h2>For the user provided values as shown below :  </h2>
+      <p>File Accessed or not ?  {{data_fileAccessed}}</p>
+      <p>File Modified or not ?  {{data_fileModified}}</p>
+      <p>File Uploaded or not ? {{data_fileUploaded}}</p>
+      <p>File Downloaded or not ? {{data_fileDownloaded}}</p>
+      <p>File Deleted or not ? {{data_deletedItems}}</p>
+      <p>Is Risky hour or not ?  {{data_isRiskyHour}}</p>
+      <p>User Login failed or not ? {{data_userLoginFailed}}</p>
+      <p>GeoLocation India or not  ? {{data_geoLocation}}</p>
+      <p> Result status known or unknown ? {{data_resultStatus}}</p>
+      <hr>
+      <br>
+      {% if out == 1 %}
+        <h1><p style="color: red;"></b>Threat has been detected </b></p></h1>
+      {% else %}
+        <h1><p style="color: green;"><b>No Threat has been found</b></p></h1>
+
+      {% endif %}
+
+    <a  href="{% url 'ckdApp:ckd' %}">CKD Predicition</a>
+    <br>
+</div>
+{% endblock %}
